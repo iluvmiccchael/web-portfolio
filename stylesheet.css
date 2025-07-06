@@ -15,6 +15,7 @@
 }
 
 body{
+    position: relative;
     background-color: var(--main-color);
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),default;
 }
@@ -25,6 +26,71 @@ body{
     box-sizing: border-box;
     background-color: var(--main-color);
 }
+
+
+@keyframes autoBlur { 0% { filter: blur(0px); } 
+                        10% { filter: blur(8px); } 
+                        90% { filter: blur(8px); } 
+                        100% { filter: blur(0px); } } 
+.pagewrapper { animation: autoBlur 6s ease-in-out;
+               z-index: 1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* hello animantion code */
+  .new__bg {
+    height: 100%;
+    min-height: 500px;
+    background: none;
+    display: flex;
+    justify-content: center;
+  }
+  .hello__div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+  }
+  .hello__svg {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 48px;
+    stroke-dasharray: 5800px;
+    stroke-dashoffset: 5800px;
+    animation: anim__hello linear 5s forwards;
+    width: 100%;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+  }
+ 
+  @keyframes anim__hello {
+    0% {
+      stroke-dashoffset: 5800;
+    }
+    25% {
+      stroke-dashoffset: 5800;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+.new__bg .hello__div .hello__svg{ animation: anim__hello 5.8s ease-in-out;}
+
+/* end of hello code */
 
 .items {
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFFFFF" stroke="%23000000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
