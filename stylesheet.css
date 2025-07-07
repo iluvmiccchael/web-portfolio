@@ -88,7 +88,9 @@ body {
       stroke-dashoffset: 0;
     }
   }
-.new__bg .hello__div .hello__svg{ animation: anim__hello 5.8s ease-in-out;}
+.new__bg .hello__div .hello__svg{ animation: anim__hello 5.8s ease-in-out;
+                                  margin-top: -200px;
+}
 
 /* end of hello code */
 
