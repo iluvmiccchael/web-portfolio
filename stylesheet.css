@@ -177,3 +177,10 @@ button:hover{
     display: block;
 
 }
+/* info tab box */
+.info{
+    background-color: bisque;
+    color: bisque;
+    height: 200px;
+    width: 100px;
+}
